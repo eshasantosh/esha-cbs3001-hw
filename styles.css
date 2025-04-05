@@ -98,6 +98,34 @@ nav a:hover {
   margin-top: 10px;
 }
 
+.carousel {
+  width: 90%;
+  max-width: 1000px;
+  margin: 40px auto;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.carousel-track {
+  display: flex;
+  width: 300%;
+  animation: slide 12s infinite;
+}
+
+.carousel-item {
+  width: 100%;
+  object-fit: cover;
+}
+
+@keyframes slide {
+  0% { transform: translateX(0%); }
+  33% { transform: translateX(-100%); }
+  66% { transform: translateX(-200%); }
+  100% { transform: translateX(0%); }
+}
+
+
 /* Footer */
 footer {
   background-color: #3b1a1a;
