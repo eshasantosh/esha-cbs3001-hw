@@ -23,12 +23,11 @@
   <!-- 🎠 Image Carousel Section -->
   <section class="carousel-container">
     <div class="carousel">
-  <div class="carousel-track">
-    <img src="craft1.jpg" alt="Golden Fish" class="carousel-item" />
-    <img src="craft2.jpg" alt="Golden Turtle" class="carousel-item" />
-    <img src="craft3.jpg" alt="Golden Beaver" class="carousel-item" />
-  </div>
-</div>
+      <img class="carousel-image" src="images/craft1.jpg" alt="Golden Fish">
+      <img class="carousel-image" src="images/craft2.jpg" alt="Turtle">
+      <img class="carousel-image" src="images/craft3.jpg" alt="Beaver">
+    </div>
+    
 
   </section>
 
@@ -41,5 +40,20 @@
     <p>&copy; 2025 Esha's Handmade Crafts</p>
   </footer>
 
+  <script>
+    let index = 0;
+    const images = document.querySelectorAll('.carousel-image');
+  
+    function showNextImage() {
+      images.forEach((img, i) => {
+        img.style.display = i === index ? 'block' : 'none';
+      });
+      index = (index + 1) % images.length;
+    }
+  
+    showNextImage(); // Show first image immediately
+    setInterval(showNextImage, 3000); // Rotate every 3 seconds
+  </script>
+  
 </body>
 </html>
