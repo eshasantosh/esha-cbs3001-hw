@@ -80,6 +80,59 @@ nav a:hover {
 footer {
   background-color: #3a1e1e;
   text-align: center;
+
+.shop-row {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px;
+  flex-wrap: wrap; /* You can change this to overflow-x: auto; if you want scroll instead */
+  background-color: #fff4f0;
+}
+
+.card {
+  width: 280px;
+  height: 420px;
+  background-color: #ffe9ec;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.card h3 {
+  margin: 15px 0 5px;
+  color: #4e2a2a;
+  font-size: 1.3rem;
+}
+
+.card p {
+  flex-grow: 1;
+  font-size: 0.95rem;
+  color: #7d3e3e;
+}
+
+.card span {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #4e2a2a;
+  margin-top: 10px;
+}
+
   padding: 15px;
   color: #ffe9ec;
 }
